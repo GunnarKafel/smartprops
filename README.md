@@ -12,8 +12,8 @@ These smart props will not function correctly if the file paths are incorrect si
 ## Metal Ladder
 ![image](https://github.com/GunnarKafel/smartprops/assets/65134886/ddad108f-5181-4e40-9439-0d69934148ec)
 
-## Pipe Kit (WIP)
-![image](https://github.com/GunnarKafel/smartprops/assets/65134886/c6e155af-7e95-4673-890b-149c41ce40cb)
+## Pipe Kit
+![image](https://media.discordapp.net/attachments/748776757813051402/1181999531726995487/image.png?ex=658319d8&is=6570a4d8&hm=c08e6b720f4b3473fe2c84582f15cd8f1a9ab1ade9686c8989e663962137df12&=&format=webp&quality=lossless&width=733&height=676)
 
 ## Railing Kit
 ![image](https://github.com/GunnarKafel/smartprops/assets/65134886/1fdbd8e7-4a07-4e4c-a278-6dc98ae2c463)
