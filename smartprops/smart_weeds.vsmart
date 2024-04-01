@@ -1,0 +1,179 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{5ab656f0-06de-478a-804e-489e82994fb5} -->
+{
+	generic_data_type = "CSmartPropRoot"
+	_editor = 
+	{
+		next_element_id = 2
+	}
+	m_nContentVersion = 0
+	m_nMaxDepth = 32
+	m_Variables = 
+	[
+		{
+			_class = "CSmartPropVariable_Int"
+			m_VariableName = "MinMax"
+			m_bExposeAsParameter = true
+			m_ParameterName = "Grass Count"
+			m_DefaultValue = 17
+			m_nParamaterMaxValue = 8192
+		},
+		{
+			_class = "CSmartPropVariable_Model"
+			m_VariableName = "GrassModel"
+			m_DefaultValue = "models/de_inferno/imported/imported_foliage_grass_weed_cluster_001_interactive.vmdl"
+			m_bExposeAsParameter = true
+		},
+		{
+			_class = "CSmartPropVariable_Float"
+			m_VariableName = "DetailWeight"
+			m_DisplayName = "Grass Detail Probability"
+			m_bExposeAsParameter = true
+		},
+		{
+			_class = "CSmartPropVariable_Float"
+			m_VariableName = "RandomScaleMin"
+			m_DisplayName = "Random Scale Min"
+			m_DefaultValue = 1.0
+			m_bExposeAsParameter = true
+		},
+		{
+			_class = "CSmartPropVariable_Float"
+			m_VariableName = "RandomScaleMax"
+			m_DisplayName = "Random Scale Max"
+			m_DefaultValue = 1.2
+			m_bExposeAsParameter = true
+		},
+		{
+			_class = "CSmartPropVariable_Float"
+			m_VariableName = "Radius"
+			m_bExposeAsParameter = false
+			m_ParameterName = "Radius"
+			m_DefaultValue = 30
+			m_flParamaterMaxValue = 60.000000
+		},
+		{
+			_class = "CSmartPropVariable_TraceNoHit"
+			m_VariableName = "HitBehavior"
+			m_DisplayName = "Trace Hit Behavior"
+			m_bExposeAsParameter = true
+		}
+	]
+	m_Choices = [  ]
+	m_Children = 
+	[
+		{
+			_class = "CSmartPropElement_PlaceInSphere"
+			m_nElementID = 2
+			m_nCountMin = 
+			{
+				m_SourceName = "MinMax"
+			}
+			m_nCountMax = 
+			{
+				m_SourceName = "MinMax"
+			}
+			m_flPositionRadiusInner = 0.000000
+			m_flPositionRadiusOuter = 
+			{
+				m_SourceName = "Radius"
+			}
+			m_Modifiers = 
+			[
+				{
+					_class = "CSmartPropOperation_CreateSizer"
+					m_OutputVariableMaxX = "Radius"
+				}
+			]
+			m_bEnabled = true
+			m_bAlignOrientation = false
+			m_DistributionMode = "REGULAR"
+			m_PlacementMode = "CIRCLE"
+			m_Children =
+			[
+				{
+					_class = "CSmartPropElement_Model"
+					m_nElementID = 1
+					m_bEnabled = true
+					m_SelectionCriteria = [  ]
+					m_Modifiers = 
+					[
+						{
+							_class = "CSmartPropOperation_RandomOffset"
+							m_vRandomPositionMin = [-16.0, -16.0, -2.0]
+							m_vRandomPositionMax = [16.0, 16.0, -4.0]
+						},
+						{
+							_class = "CSmartPropOperation_TraceInDirection"
+							m_vDirection = [0.0, 0.0, -1.0]
+							m_flTraceLength = 8192.0
+							m_flSurfaceUpInfluence = 1.0
+							m_bIgnoreModels = true
+							m_bIgnoreToolMaterials = false
+							bIgnoreTranslucent = true
+							m_nNoHitResult = {m_SourceName = "HitBehavior"}
+						},
+						{
+							_class = "CSmartPropFilter_SurfaceProperties"
+							m_AllowedSurfaceProperties = ["mud", "Mud", "dirt", "grass"]
+						},
+						{
+							_class = "CSmartPropOperation_RotateRandom"
+							m_vRandomRotationMax = [360.0, 0.0, 0.0]
+						},
+						{
+							_class = "CSmartPropOperation_RandomScale"
+							m_flRandomScaleMin = {m_SourceName = "RandomScaleMin"}
+							m_flRandomScaleMax = {m_SourceName = "RandomScaleMax"}
+						},
+					]
+					m_sModelName = resource_name:"models/de_inferno/imported/imported_foliage_grass_weed_cluster_001_interactive.vmdl"
+					m_MaterialGroupName = ""
+					m_vModelScale = [ 1.0, 1.0, 1.0 ]
+				},
+				{
+					_class = "CSmartPropElement_Model"
+					m_nElementID = 1
+					m_bEnabled = true
+					m_SelectionCriteria = [  ]
+					m_Modifiers = 
+					[
+						{
+							_class = "CSmartPropFilter_Probability"
+							m_flProbability = {m_SourceName = "DetailWeight"}
+						},
+						{
+							_class = "CSmartPropOperation_RandomOffset"
+							m_vRandomPositionMin = [-16.0, -16.0, -2.0]
+							m_vRandomPositionMax = [16.0, 16.0, -4.0]
+						},
+						{
+							_class = "CSmartPropOperation_TraceInDirection"
+							m_vDirection = [0.0, 0.0, -1.0]
+							m_flTraceLength = 8192.0
+							m_flSurfaceUpInfluence = 1.0
+							m_bIgnoreModels = true
+							bIgnoreTranslucent = true
+							m_nNoHitResult = {m_SourceName = "HitBehavior"}
+						},
+						{
+							_class = "CSmartPropFilter_SurfaceProperties"
+							m_AllowedSurfaceProperties = ["mud", "Mud", "dirt"]
+						},
+						{
+							_class = "CSmartPropOperation_RotateRandom"
+							m_vRandomRotationMax = [360.0, 0.0, 0.0]
+						},
+						{
+							_class = "CSmartPropOperation_RandomScale"
+							m_flRandomScaleMin = {m_SourceName = "RandomScaleMin"}
+							m_flRandomScaleMax = {m_SourceName = "RandomScaleMax"}
+						},
+					]
+					m_sModelName = resource_name:"models/de_overpass/foliage/grass_detail_001/grass_detail_001.vmdl"
+					m_MaterialGroupName = ""
+					m_vModelScale = [ 1.0, 1.0, 1.0 ]
+				},
+			]
+		}
+	]
+}
