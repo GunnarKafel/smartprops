@@ -24,6 +24,10 @@ These smart props will not function correctly if the file paths are incorrect si
 ## Fence Kit
 ![image](https://github.com/GunnarKafel/smartprops/assets/65134886/2aa3339d-23e5-4499-91f1-b7296d89b927)
 
+## Wireset
+![image](https://github.com/GunnarKafel/smartprops/assets/65134886/81e236e2-9da2-40a9-9656-1f71658ecc1a)
+
+
 
 
 
